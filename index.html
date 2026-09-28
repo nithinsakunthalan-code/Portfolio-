@@ -2037,9 +2037,6 @@ void loop() { server.handleClient(); }</pre>
 
       <div class="sub">Reflection</div>
       <p>This task was really about HTTP request-response mechanics and GPIO control, and about seeing the limitation up front: it only works from a device on the <em>same</em> WiFi network. Leave the house and the IP address is unreachable — which is exactly the problem the next two tasks solve.</p>
-
-      <div class="sub">Repository Link</div>
-      <a class="repo-link" href="#">github.com/your-username/your-repo/tree/main/task-1-web-server &nbsp;(replace with your link)</a>
     </section>
 
     <!-- =========================== TASK 2 =========================== -->
@@ -2125,9 +2122,6 @@ void loop() { io.run(); }</pre>
 
       <div class="sub">Reflection</div>
       <p>The big conceptual shift from Task 1: neither end of this loop needs to reach the other directly — both just need a route to Adafruit IO's broker. That's the whole point of routing IoT devices through a cloud broker instead of trying to reach them peer-to-peer, and it's what makes this work from anywhere with internet, not just the home WiFi.</p>
-
-      <div class="sub">Repository Link</div>
-      <a class="repo-link" href="#">github.com/your-username/your-repo/tree/main/task-2-adafruit-mqtt &nbsp;(replace with your link)</a>
     </section>
 
     <!-- =========================== TASK 3 =========================== -->
@@ -2194,9 +2188,6 @@ ESP32 (same subscribed MQTT client from Task 2) -> relay -> 230V bulb ON</div>
 
       <div class="sub">Reflection</div>
       <p>The real lesson here isn't the voice control itself — it's that nothing about the ESP32 firmware needed to change at all to add it. Speech recognition, phrase matching, and the Google&harr;IFTTT&harr;Adafruit authentication are all handled entirely in the cloud, by services built for exactly that. The ESP32's job stayed the same simple one: watch a feed, flip a pin.</p>
-
-      <div class="sub">Repository Link</div>
-      <a class="repo-link" href="#">github.com/your-username/your-repo/tree/main/task-3-ifttt-automation &nbsp;(replace with your link)</a>
     </section>
 
     <!-- =========================== TASK 4 =========================== -->
@@ -2279,9 +2270,6 @@ function toggleBulb() { set(ref(db, 'appliances/bulbState'), !isOn); }</pre>
 
       <div class="sub">Reflection</div>
       <p>This task was the jump from "one feed, one toggle" (Tasks 2–3) to an actual application: real users, real login, multiple data streams synced live. The BaaS model is what made that possible without standing up and securing a backend server from scratch.</p>
-
-      <div class="sub">Repository Link</div>
-      <a class="repo-link" href="#">github.com/your-username/your-repo/tree/main/task-4-firebase-dashboard &nbsp;(replace with your link)</a>
     </section>
 
     <!-- =========================== TASK 5 =========================== -->
@@ -2377,9 +2365,6 @@ if (mode == "automatic") {
 
       <div class="sub">Reflection</div>
       <p>This task pulled every earlier piece into one autonomous system: multiple sensors on one microcontroller, bidirectional cloud sync, manual override coexisting with automatic logic, and a safe failure mode. The debugging here mattered as much as the feature work — assuming hardware specs carry over between boards (the ADC width) and not checking a datasheet before wiring (the active-LOW relay) were the two real lessons, more than the code itself.</p>
-
-      <div class="sub">Repository Link</div>
-      <a class="repo-link" href="#">github.com/your-username/your-repo/tree/main/task-5-logging-automation &nbsp;(replace with your link)</a>
     </section>
 
   </main>
